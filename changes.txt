@@ -1,3 +1,10 @@
+0.02 - 16th October 2010
+
+- Moved to github and Dist::Zilla
+- Added object-based interface
+- Corrected issues with character positioning, so document segments can be handled
+- Initial support for textual form fields/bookmarks
+
 0.01 - 6th April 2010
 
 - Initial release
