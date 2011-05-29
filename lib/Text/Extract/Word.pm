@@ -416,7 +416,7 @@ sub get_text {
 sub _filter {
     my ($text, $filter) = @_;
     if (! defined($filter)) {
-        $text =~ tr/\x02\x05\x08\x28\x3c\x3e//d;
+        $text =~ tr/\x02\x05\x08//d;
         $text =~ tr/\x{2018}\x{2019}\x{201c}\x{201d}\x{0007}\x{000d}\x{2002}\x{2003}\x{2012}\x{2013}\x{2014}/''""\t\n  \-\-\-/;
         $text =~ s{\cS(?:[^\cT]*\cT)([^\cU]*)\cU}{$1}g;
         $text =~ s{\cS(?:[^\cU]*\cU)}{}g;

@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 24;
+use Test::More tests => 27;
 
 use Text::Extract::Word qw(get_all_text);
 use File::Spec;
@@ -45,5 +45,10 @@ ok($string, "Got text for test6.doc");
 like($string, qr{Insert interface name here}, "Got first string");
 like($string, qr{Méthodes appelées}, "Got second string");
 like($string, qr{Insert logic description here}, "Got third string");
+
+$string = get_all_text(File::Spec->catpath($volume, $directory, "test9.doc"));
+ok($string, "Got text for test9.doc");
+like($string, qr!{This line gets read fine}!, "Got first string");
+like($string, qr{Ooops, where are the \( opening \( brackets\?}, "Got second string");
 
 1;
