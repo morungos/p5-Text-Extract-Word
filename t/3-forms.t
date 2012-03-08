@@ -2,6 +2,7 @@ use strict;
 use warnings;
 
 use Test::More;
+use File::Spec;
 
 use Text::Extract::Word qw(get_all_text);
 
