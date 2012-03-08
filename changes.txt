@@ -1,3 +1,7 @@
+0.04 - 8th March 2012
+
+- Added missing import in t/3-forms.t
+
 0.03 - 29th May 2011
 
 - Removed filtering for (, <, and > -- reported by Damien Gourbiere
